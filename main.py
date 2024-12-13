@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes import characters, items  
+from routes import characters, items
 
 app = FastAPI(
     title="Hobbit API",

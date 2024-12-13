@@ -1,8 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from database import get_db
+from models import Character
 
-# Cria o router para a rota de characters
 router = APIRouter()
 
 @router.get("/")
-def list_characters():
-    return [{"name": "Frodo", "race": "Hobbit", "role": "Ring Bearer"}]
+def list_characters(db: Session = Depends(get_db)):
+    characters = db.query(Character).all()  # Obtém todos os personagens no banco
+    return characters
