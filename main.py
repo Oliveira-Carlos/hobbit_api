@@ -7,7 +7,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Rotas 
+# Conectar as rotas
 app.include_router(characters.router, prefix="/characters", tags=["Characters"])
 app.include_router(items.router, prefix="/items", tags=["Items"])
 
