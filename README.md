@@ -1,37 +1,37 @@
 # Hobbit API
 
-Bem-vindo à **Hobbit API**, uma aplicação baseada no universo de J.R.R. Tolkien. Este projeto é uma API RESTful desenvolvida com Python e FastAPI, projetada para gerenciar dados de personagens, itens e muito mais.
+Bem-vindo à **Hobbit API**, uma aplicação baseada no universo de J.R.R. Tolkien. Este projeto é uma API RESTful desenvolvida com Python e FastAPI, projetada para gerenciar dados de personagens, itens e o que mais ainda vier à minha cabeça implementar.
 
 ## Funcionalidades
 
--   **Gerenciamento de personagens**:
-    -   Listar personagens
-    -   Criar novos personagens
-    -   Atualizar informações de personagens
-    -   Remover personagens
--   **Autenticação**:
-    -   Registro de usuários
-    -   Login com geração de JWT para autenticação
+- **Gerenciamento de personagens**:
+  - Listar personagens
+  - Criar novos personagens
+  - Atualizar informações de personagens
+  - Remover personagens
+- **Autenticação (Em desenvolvimento...)**:
+  - Registro de usuários
+  - Login com geração de JWT para autenticação
 
 ## Tecnologias utilizadas
 
--   **Linguagem**: Python 3.11+
--   **Framework**: FastAPI
--   **Banco de dados**: PostgreSQL
--   **ORM**: SQLAlchemy
--   **Autenticação**: JWT (JSON Web Tokens)
--   **Outros**:
-    -   `python-multipart` para suporte a formulários
-    -   `python-dotenv` para gerenciamento de variáveis de ambiente
+- **Linguagem**: Python 3.11+
+- **Framework**: FastAPI
+- **Banco de dados**: PostgreSQL
+- **ORM**: SQLAlchemy
+- **Autenticação**: JWT (JSON Web Tokens)
+- **Outros**:
+  - `python-multipart` para suporte a formulários
+  - `python-dotenv` para gerenciamento de variáveis de ambiente
 
 ## Requisitos
 
 Antes de iniciar, certifique-se de que você possui os seguintes itens instalados:
 
--   Python 3.11+
--   PostgreSQL
--   Git
--   Ambiente virtual configurado (opcional, mas recomendado)
+- Python 3.11+
+- PostgreSQL
+- Git
+- Ambiente virtual configurado (opcional, mas recomendado)
 
 ## Instalação
 
@@ -62,12 +62,14 @@ pip install -r requirements.txt
 Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
 ```env
-
+DATABASE_URL=postgresql://username:password@localhost:5432/dbname
 ```
 
-```bash
-# Em breve, instruções detalhadas sobre migrações
-```
+- username: Seu nome de usuário do banco.
+- password: A senha do banco.
+- localhost: O endereço do servidor (ou IP).
+- 5432: A porta padrão do PostgreSQL.
+- dbname: O nome do banco de dados.
 
 ### 5. Inicialize o banco de dados
 
@@ -85,7 +87,7 @@ Inicie o servidor de desenvolvimento:
 uvicorn main:app --reload
 ```
 
-A API estará disponível em: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+A API estará disponível em: [http://localhost:8000](http://localhost:8000)
 
 ## Uso da API
 
@@ -93,28 +95,28 @@ A API estará disponível em: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 Após iniciar a aplicação, você pode acessar a documentação interativa em:
 
--   Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
--   Redoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+- Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
+- Redoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
 ### Endpoints principais
 
-#### Cadastro de usuário
+#### Cadastro de usuário (Em desenvolvimento...)
 
--   **POST /register**: Registra um novo usuário
-    -   Parâmetros: `username`, `password`
+- **POST /register**: Registra um novo usuário
+  - Parâmetros: `username`, `password`
 
-#### Login
+#### Login (Em desenvolvimento...)
 
--   **POST /login**: Autentica o usuário e retorna um `access_token`
-    -   Parâmetros: `username`, `password`
+- **POST /login**: Autentica o usuário e retorna um `access_token`
+  - Parâmetros: `username`, `password`
 
 #### Gerenciamento de personagens
 
--   **GET /characters/**: Lista todos os personagens
--   **POST /characters/**: Cria um novo personagem
-    -   Parâmetros: `name`, `race`, `quote` (opcional), `description` (opcional)
--   **PUT /characters/{character_id}**: Atualiza um personagem existente
--   **DELETE /characters/{character_id}**: Remove um personagem
+- **GET /characters/**: Lista todos os personagens
+- **POST /characters/**: Cria um novo personagem
+  - Parâmetros: `name`, `race`, `quote` (opcional), `description` (opcional)
+- **PUT /characters/{character_id}**: Atualiza um personagem existente
+- **DELETE /characters/{character_id}**: Remove um personagem
 
 ## Desenvolvimento
 
@@ -122,10 +124,10 @@ Este projeto ainda está em desenvolvimento.
 
 ## Roadmap
 
--   [ ] Implementar gerenciamento de itens
--   [ ] Melhorar autenticação e controle de acesso
--   [ ] Adicionar testes automatizados
--   [ ] Adicionar instruções detalhadas no README quando o projeto estiver completo para outras pessoas poderem usar
+- [ ] Implementar gerenciamento de itens
+- [ ] Melhorar autenticação e controle de acesso
+- [ ] Adicionar testes automatizados
+- [ ] Adicionar instruções detalhadas no README quando o projeto estiver completo para outras pessoas poderem usar
 
 ## Licença
 
