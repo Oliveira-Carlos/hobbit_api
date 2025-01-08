@@ -41,7 +41,7 @@ fileConfig(config.config_file_name)
 
 # Função para executar as migrações
 def run_migrations_offline():
-    url = DATABASE_URL  # URL do banco de dados
+    url = DATABASE_URL  
     context.configure(url=url, target_metadata=target_metadata)
     
     with context.begin_transaction():

@@ -1,6 +1,6 @@
 # Hobbit API
 
-Bem-vindo à **Hobbit API**, uma aplicação baseada no universo de J.R.R. Tolkien. Este projeto é uma API RESTful desenvolvida com Python e FastAPI, projetada para gerenciar dados de personagens, itens e muito mais.
+Bem-vindo à **Hobbit API**, uma aplicação baseada no universo de J.R.R. Tolkien. Este projeto é uma API RESTful desenvolvida com Python e FastAPI, projetada para gerenciar dados de personagens, itens e o que mais ainda vier à minha cabeça implementar.
 
 ## Funcionalidades
 
@@ -9,7 +9,7 @@ Bem-vindo à **Hobbit API**, uma aplicação baseada no universo de J.R.R. Tolki
     -   Criar novos personagens
     -   Atualizar informações de personagens
     -   Remover personagens
--   **Autenticação**:
+-   **Autenticação (Em desenvolvimento...)**:
     -   Registro de usuários
     -   Login com geração de JWT para autenticação
 
@@ -62,12 +62,14 @@ pip install -r requirements.txt
 Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
 ```env
-
+DATABASE_URL=postgresql://username:password@localhost:5432/dbname
 ```
 
-```bash
-# Em breve, instruções detalhadas sobre migrações
-```
+-   username: Seu nome de usuário do banco.
+-   password: A senha do banco.
+-   localhost: O endereço do servidor (ou IP).
+-   5432: A porta padrão do PostgreSQL.
+-   dbname: O nome do banco de dados.
 
 ### 5. Inicialize o banco de dados
 
@@ -85,7 +87,7 @@ Inicie o servidor de desenvolvimento:
 uvicorn main:app --reload
 ```
 
-A API estará disponível em: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+A API estará disponível em: [http://localhost:8000](http://localhost:8000)
 
 ## Uso da API
 
@@ -93,8 +95,8 @@ A API estará disponível em: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 Após iniciar a aplicação, você pode acessar a documentação interativa em:
 
--   Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
--   Redoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+-   Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
+-   Redoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
 ### Endpoints principais
 
