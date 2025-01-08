@@ -100,12 +100,12 @@ Após iniciar a aplicação, você pode acessar a documentação interativa em:
 
 ### Endpoints principais
 
-#### Cadastro de usuário
+#### Cadastro de usuário (Em desenvolvimento...)
 
 -   **POST /register**: Registra um novo usuário
     -   Parâmetros: `username`, `password`
 
-#### Login
+#### Login (Em desenvolvimento...)
 
 -   **POST /login**: Autentica o usuário e retorna um `access_token`
     -   Parâmetros: `username`, `password`
